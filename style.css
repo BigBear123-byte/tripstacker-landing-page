@@ -1,0 +1,313 @@
+/* Basic Reset & Defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+h1, h2 {
+    color: #1a2b48; /* Dark blue for headings */
+    margin-bottom: 0.75em;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.8rem; /* Larger hero heading */
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 1.2em;
+    color: #555;
+}
+
+a {
+    color: #007bff; /* Standard link blue */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0;
+    margin-bottom: 1.5em;
+}
+
+ul li {
+    margin-bottom: 0.8em;
+    position: relative;
+    padding-left: 25px; /* Space for custom checkmark */
+    color: #444;
+}
+
+ul li::before {
+    content: '✓'; /* Checkmark */
+    position: absolute;
+    left: 0;
+    color: #28a745; /* Green checkmark */
+    font-weight: bold;
+}
+
+
+/* Header */
+.site-header {
+    background-color: #fff;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    z-index: 10;
+}
+
+.site-header .container {
+    min-height: 50px;
+}
+
+/* Logo positioned absolutely relative to viewport/body */
+.logo {
+    position: absolute;
+    top: 30px;  /* Adjust distance from top */
+    right: 40px; /* Adjust distance from right */
+    z-index: 1010;
+}
+
+/* Logo image style */
+.logo-image {
+    max-height: 240px; /* DOUBLED size - ADJUST AS NEEDED */
+    width: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(rgba(26, 43, 72, 0.65), rgba(26, 43, 72, 0.65)), url('Hero Image.jpg') no-repeat center center/cover;
+    padding: 100px 0 120px 0;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    margin-bottom: 0.5em;
+    color: #ffffff;
+}
+
+#hero .subtitle {
+    font-size: 1.15rem;
+    color: #e0e0e0;
+    max-width: 700px;
+    margin: 0 auto 1.5em auto;
+}
+
+.hero-cta {
+    margin-bottom: 0;
+}
+
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.cta-button.primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.cta-button.primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: #fff;
+}
+
+/* About Section */
+#about {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+#about h2 {
+     text-align: center;
+     margin-bottom: 1.5em;
+}
+
+
+/* CTA Section (Coming Soon / Email Capture) */
+.cta-section {
+    background-color: #1a2b48;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    color: #fff;
+}
+
+.cta-section p {
+    color: #e0e0e0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5em;
+}
+
+.email-capture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.email-capture input[type="email"] {
+    padding: 14px 20px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1rem;
+    min-width: 300px;
+    font-family: inherit;
+}
+
+.email-capture input[type="email"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.form-message {
+    min-height: 1.2em;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.form-message.success {
+    color: #a7e8b4;
+}
+.form-message.error {
+    color: #f8a5a5;
+}
+
+
+/* Info Section (Partnerships) */
+.info-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+.info-section h2 {
+     margin-bottom: 1em;
+}
+
+.contact-link {
+    font-weight: 600;
+}
+
+/* Footer */
+.site-footer-bottom {
+    background-color: #343a40;
+    color: #ccc;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.site-footer-bottom p {
+    margin-bottom: 0.5em;
+    color: #ccc;
+}
+
+.site-footer-bottom a {
+    color: #fff;
+}
+.site-footer-bottom a:hover {
+    color: #eee;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Adjust logo position and size for mobile */
+    .logo {
+        top: 15px;
+        right: 15px;
+    }
+    .logo-image {
+        max-height: 180px; /* DOUBLED mobile size - ADJUST AS NEEDED */
+    }
+
+
+    .site-header {
+        padding: 10px 0;
+    }
+
+    #hero {
+        padding: 80px 0 100px 0;
+    }
+
+    #hero .subtitle {
+        font-size: 1rem;
+    }
+
+    #about, #coming-soon, .info-section {
+        padding: 60px 0;
+    }
+
+    .email-capture {
+        flex-direction: column;
+        width: 90%;
+        max-width: 350px;
+        margin: 20px auto 15px auto;
+    }
+
+    .email-capture input[type="email"],
+    .email-capture button {
+        width: 100%;
+    }
+}
