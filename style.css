@@ -279,7 +279,7 @@ ul li::before {
         right: 15px;
     }
     .logo-image {
-        max-height: 100px; /* DOUBLED mobile size - ADJUST AS NEEDED */
+        max-height: 130px; /* DOUBLED mobile size - ADJUST AS NEEDED */
     }
 
 
